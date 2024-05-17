@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(250deg, #d401d4, #01d4b1);
+    height: 100vh;
+}
+
+        .forgot-password-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+
+        .forgot-password-container h2 {
+            text-align: center;
+        }
+
+        .forgot-password-container input {
+            margin-bottom: 10px;
+        }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/Style/home.css">
+</head>
+
+<body>
+
+    <div class="si p-5 text-white text-center">
+        <h1>Bienvenido o Bienvenida</h1>
+        <p>Este es el centro de control para recursos fisicos y control de sucursales con integración ecomerce de
+            nuestra empresa.</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Templates/reg_productos.html">Agregar productos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="close_sesion">
+                        <div class="container-center">
+                            <button type="button" class="btn btn-danger btn-sm" id="btn_log_out">Cerrar Sesion</button>
+                        </div>
+                    </a>
+                    <a class="nav-link" href="#" id="close_sesion">
+                        <div class="container-center">
+                            <button type="button" class="btn btn-danger btn-sm" id="btn_del_acc">Borrar mi
+                                cuenta</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-center">
+        <div id="confirmacion_eliminar_cuenta" style="display: none;" class="confirmacion">
+            <p>¿Estás seguro de que deseas eliminar tu cuenta?</p>
+            <button id="btn_confirm_delete_account">Sí, eliminar cuenta</button>
+            <button onclick="cancelarEliminar()">Cancelar</button>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>About Me</h2>
+                <h5>Photo of me:</h5>
+                <div class="fakeimg">Fake Image</div>
+                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                <h3 class="mt-4">Some Links</h3>
+                <p>Lorem ipsum dolor sit ame.</p>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+            <div class="col-sm-8">
+                <h2>Información del Usuario</h2>
+            
+                <div>
+                    <strong>Identificación:</strong>
+                    <span id="userIdentificacion"></span>
+                </div>
+                <div>
+                    <strong>Nombre:</strong>
+                    <span id="userName"></span>
+                </div>
+                <div>
+                    <strong>Dirección:</strong>
+                    <span id="userDireccion"></span>
+                </div>
+                <div>
+                    <strong>Teléfono:</strong>
+                    <span id="userTelefono"></span>
+                </div>
+                <div>
+                    <strong>Tipo de Sangre (Rh):</strong>
+                    <span id="userRh"></span>
+                </div>
+                <div>
+                    <strong>Estado Civil:</strong>
+                    <span id="userEstadoCivil"></span>
+                </div>
+                <div>
+                    <strong>Género:</strong>
+                    <span id="userGenero"></span>
+                </div>
+                <div>
+                    <strong>Correo Electrónico:</strong>
+                    <span id="userEmail"></span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+        <p>Footer</p>
+    </div>
+
+    <script type="module" src="../Services/home.js"></script>
+    <script type="module" src="../Services/delete_account.js"></script>
+
+    <script>
+        function cancelarEliminar() {
+            document.getElementById("confirmacion_eliminar_cuenta").style.display = "none";
+        }
+        document.getElementById("btn_del_acc").addEventListener("click", async function (event) {
+            document.getElementById("confirmacion_eliminar_cuenta").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

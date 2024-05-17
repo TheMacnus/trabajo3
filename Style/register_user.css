@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(250deg, #d401d4, #01d4b1);
+    height: 100vh;
+}
+
+        .register-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 500px;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .input-group input {
+            width: calc(50% - 5px);
+        }
+
+        .register-container h2 {
+            text-align: center;
+        }
+
+        .register-container input {
+            margin-bottom: 10px;
+        }
+
+        .boton-google-regist {
+            display: inline-block;
+            background-color: #FF000000;
+            color: #000000;
+            text-decoration: none;
+            padding: 5px 20px;
+            border: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-google-container {
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: #ffffff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            border: 2px solid #d0d0d0;
+        }
+
+        .btn-google-container:hover {
+            background-color: #ece2d0;
+        }
+
+        .boton-facebook-regist {
+            display: inline-block;
+            background-color: #00000000;
+            color: #000000;
+            padding: 5px 20px;
+            text-decoration: none;
+            border: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-facebook-container {
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: #ffffff;
+            color: #fff;
+            padding: 5dp;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            border: 2px solid #d0d0d0;
+        }
+
+        .btn-facebook-container:hover {
+            background-color: #d0d9ec;
+        }
+
+        .img-centrada {
+            margin: auto;
+        }
+
+        select.form-control {
+            appearance: none;
+            /* Eliminar los estilos predeterminados del sistema */
+            -webkit-appearance: none;
+            /* Para navegadores basados en WebKit */
+            -moz-appearance: none;
+            /* Para navegadores basados en Gecko */
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%231b6ec2" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 608c-9.6 0-19.2-3.2-26.4-10.4l-300-296c-14.4-12-14.4-32.8 0-44.8s38.4-12 52.8 0l273.6 270.4 273.6-270.4c14.4-12 38.4-12 52.8 0s14.4 32.8 0 44.8l-300 296c-7.2 7.2-16.8 10.4-26.4 10.4z"/></svg>');
+            /* Agregar una flecha personalizada */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            /* Posiciona la flecha a la derecha */
+            background-size: 16px;
+            /* Tamaño de la flecha */
+            padding-right: 30px;
+            /* Ajusta el espacio para la flecha */
+            margin-bottom: 10px;
+        }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/Style/index.css">
+
+
+</head>
+
+<body>
+    <div id="success-alert" class="alerta alert alert-success" hidden>
+        <strong>¡Éxito!</strong> Sesión cerrada exitosamente.
+    </div>
+    <div class="container-center text-center">
+        <div class="login-container">
+            <h2>Iniciar sesión</h2>
+            <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+            <div class="input-group">
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                
+            </div>
+            <div>
+                <label for="adminCheckbox">Iniciar como Administrador</label>
+                <input type="checkbox" id="admincheckbox">
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block mt-3" id="login_btn">Iniciar sesión</button>
+            <div>
+                <a href="Templates/recovery_pass.html">¿Olvidaste tu contraseña?</a>
+                <br>
+                <a href="Templates/register_user.html">Registrate
+            </div>
+            <br>
+            <div class="btn-google-container">
+                <img src="Resource/ic_google.png" alt="Google" class="img-centrada">
+                <button type="submit" class="boton-google-regist" id="btn_log_google">Inicia con Google</button>
+            </div>
+            <div class="btn-facebook-container">
+                <img src="Resource/ic_facebook.png" alt="facebook" class="img-centrada">
+                <button type="submit" class="boton-facebook-regist" id="btn_log_facebook">Inicia con facebook</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- load scripts-->
+    <script type="module" src="Services/autentication.js"></script>
+    <script type="module" src="Services/auth_google.js"></script>
+    <script type="module" src="Services/auth_facebook.js"></script>
+
+    <script>
+        // Función para limpiar los valores de los campos de entrada
+        function limpiarCampos() {
+            document.getElementById('usuario').value = ''; // Limpiar el campo de usuario
+            document.getElementById('password').value = ''; // Limpiar el campo de contraseña
+        }
+
+        // Llamar a la función para limpiar los campos cuando se cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+            limpiarCampos();
+        });
+    </script>
+</body>
+
+</html>
